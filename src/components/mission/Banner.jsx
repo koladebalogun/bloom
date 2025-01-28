@@ -6,22 +6,23 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 export default function Banner() {
   const background = useRef(null);
   const introImage = useRef(null);
+  const text = useRef(null);
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    
+
     // Animation for the background image
     gsap.fromTo(
       background.current,
       { clipPath: "inset(20%)" }, // Starting state
       {
-        clipPath: "inset(0%)", // Ending state
+        clipPath: "inset(-30%)", // Ending state
         ease: "none", // Linear easing
         scrollTrigger: {
           trigger: background.current,
           start: "top top", // Start when the top of the trigger hits the top of the viewport
           end: "+=500px", // End after scrolling 500px
-          scrub: true, // Smoothly scrub through the animation
+          scrub: 1, // Smooth scrubbing (1 second delay for smoother transitions)
           markers: true, // Debugging markers (remove in production)
         },
       }
@@ -30,15 +31,31 @@ export default function Banner() {
     // Animation for the inner image
     gsap.fromTo(
       introImage.current,
-      { scaleY: 1 }, // Starting state
+      { scaleY: 1, y: -50 }, // Starting state
       {
-        scaleY: 1.5, // Ending state
+        scaleX: 1,
+        y: 10, // Ending state
         ease: "none", // Linear easing
         scrollTrigger: {
           trigger: background.current,
           start: "top top", // Start when the top of the trigger hits the top of the viewport
           end: "+=500px", // End after scrolling 500px
-          scrub: true, // Smoothly scrub through the animation
+          scrub: 1, // Smooth scrubbing (1 second delay for smoother transitions)
+        },
+      }
+    );
+
+    gsap.fromTo(
+      text.current,
+      { y: -50 }, // Starting state
+      {
+        y: 300, // Ending state
+        ease: "none", // Linear easing
+        scrollTrigger: {
+          trigger: background.current,
+          start: "top top", // Start when the top of the trigger hits the top of the viewport
+          end: "+=500px", // End after scrolling 500px
+          scrub: 1, // Smooth scrubbing (1 second delay for smoother transitions)
         },
       }
     );
@@ -58,7 +75,7 @@ export default function Banner() {
         >
           <img src={"/images/img1.jpg"} alt="intro image" />
         </div>
-        <h1 data-scroll data-scroll-speed="0.7">
+        <h1 data-scroll data-scroll-speed="0.7" ref={text}>
           Our Catalyst
         </h1>
       </div>
