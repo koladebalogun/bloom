@@ -46,9 +46,9 @@ function App() {
     <div className="App">
       {currentScene > 1 && <Logo />}
       <CustomCursor />
-      <div ref={experienceRef} style={{ height: "100vh" }}>
+      {/* <div ref={experienceRef} style={{ height: "100vh" }}>
         <Experience />
-      </div>
+      </div> */}
       <ZoomParallax />
     </div>
   );

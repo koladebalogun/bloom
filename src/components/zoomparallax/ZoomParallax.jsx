@@ -2,7 +2,6 @@ import { useScroll, useTransform, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Mission from "../mission/Mission";
 
-
 export default function ZoomParallax() {
   const [isInView, setIsInView] = useState(false);
   const boxRef = useRef(null);
@@ -66,19 +65,6 @@ export default function ZoomParallax() {
       </div>
 
       <Mission />
-
-      {/* <div className={styles.section}>
-        <div className={styles.section_inner}>
-          <h1>
-            What is <span>Upnort ?</span>
-          </h1>
-          <p>
-            We are a <span>360</span> media company that bridges the gap between clients and
-            their target audience through creative and effective channels of
-            communication.
-          </p>
-        </div>
-      </div> */}
     </>
   );
 }
