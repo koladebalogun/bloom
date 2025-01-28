@@ -1,6 +1,6 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import Footer from "../Footer/Footer"
+import Mission from "../mission/Mission";
 
 
 export default function ZoomParallax() {
@@ -65,7 +65,7 @@ export default function ZoomParallax() {
         </div>
       </div>
 
-      <Footer />
+      <Mission />
 
       {/* <div className={styles.section}>
         <div className={styles.section_inner}>
