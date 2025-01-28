@@ -29,7 +29,6 @@ export default function BannerScene() {
     currentSceneRef.current = currentScene;
   }, [currentPage, currentScene]);
 
-  console.log(currentScene)
 
   const logCurrentPage = () => {
     const page = Math.floor(scroll.offset * scroll.pages) + 1;

@@ -20,7 +20,7 @@ html,
 body,
 #root {
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   margin: 0;
   padding: 0;
 }
@@ -33,9 +33,18 @@ body,
   background: transparent;
 }
 
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.canvas{
+  height: 110vh;
+}
+
 .cursor {
   position: fixed;
-  width: 20px; /* Adjust size as needed */
+  width: 20px;
   height: 20px;
   background-color: #000;
   border-radius: 50%;
@@ -47,31 +56,26 @@ body,
 
 /* NAV */
 
-/* nav{
-  position: absolute;
-  top: 0;
-  left: 5px;
-} */
+nav {
+  margin-left: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
 
 .logo {
   position: absolute;
   width: 100%;
   top: 0%;
-  left: 2%;
-  clip-path: polygon(0% 100%, 100% 100%, 100% 0, 0 0);
   z-index: 1;
-  text-decoration: underline;
 }
 
 .logo h1 {
   font-family: blanquotey;
   font-size: 60px;
   font-weight: lighter;
-  /* text-align: center; */
   margin: 0;
   padding: 0;
   line-height: 100%;
-  
 }
 
 .logo h1 span {
@@ -254,4 +258,243 @@ img {
     top: 60px;
     transform: scale(0.8);
   }
+}
+
+
+.mission_container {
+  height: 300vh;
+  position: relative;
+}
+
+.mission_container .sticky {
+  position: sticky;
+  overflow: hidden;
+  top: 0;
+  height: 100vh;
+}
+
+.mission_container .sticky .el {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mission_container .sticky .el .mission_image_container {
+  position: relative;
+  width: 25vw;
+  height: 25vh;
+}
+
+.mission_container .sticky .el .mission_image_container img {
+  object-fit: cover;
+}
+
+.mission_container .sticky .el:nth-of-type(2) .mission_image_container {
+  top: -30vh;
+  left: 5vw;
+  width: 35vw;
+  height: 33vh;
+}
+
+.mission_container .sticky .el:nth-of-type(3) .mission_image_container {
+  top: -10vh;
+  left: -25vw;
+  width: 20vw;
+  height: 48vh;
+}
+
+.mission_container .sticky .el:nth-of-type(4) .mission_image_container {
+  left: 27.5vw;
+  width: 25vw;
+  height: 26vh;
+}
+
+.mission_container .sticky .el:nth-of-type(5) .mission_image_container {
+  top: 27.5vh;
+  left: 5vw;
+  width: 20vw;
+  height: 28vh;
+}
+
+.mission_container .sticky .el:nth-of-type(6) .mission_image_container {
+  top: 32.5vh;
+  left: -22.5vw;
+  width: 30vw;
+  height: 34vh;
+}
+
+.mission_container .sticky .el:nth-of-type(7) .mission_image_container {
+  top: 27.5vh;
+  left: 25vw;
+  width: 15vw;
+  height: 25vh;
+}
+
+.section {
+  height: 100vh;
+  background-color: #000;
+  position: relative;
+}
+
+.section_inner {
+  padding: 100px;
+  color: #fff;
+}
+
+.section_inner h1 {
+  font-size: 70px;
+  color: #008ecc;
+  text-decoration: underline;
+  text-decoration-color: #fff;
+  text-underline-offset: 15px;
+}
+
+.section_inner h1 span {
+  font-size: 100px;
+  color: #fff;
+}
+
+.section_inner p {
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+.section_inner p span {
+  font-size: 80px;
+  margin-top: 20px;
+  color: #008ecc;
+}
+
+
+@media (max-width: 768px) {
+  .section_inner {
+    padding: 20px;
+  }
+
+  .section_inner h1 {
+    font-size: 35px;    
+  }
+
+  .section_inner h1 span {
+    font-size: 50px;
+  }
+
+  .section_inner p {
+    font-size: 35px;
+  }
+
+  .section_inner p span {
+    font-size: 30px;
+  }
+
+  .mission_container .sticky .el:nth-of-type(2) .mission_image_container {
+    top: -26vh;
+    left: 5vw;
+    width: 30vw;
+    height: 25vh;
+  }
+
+  .mission_container .sticky .el:nth-of-type(3) .mission_image_container {
+    top: -10vh;
+    left: -25vw;
+    width: 20vw;
+    height: 35vh;
+  }
+}
+
+
+
+
+.footer-container {
+  position: relative;
+  height: 800px;
+  clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
+}
+
+.footer-fixed {
+  position: fixed;
+  bottom: 0;
+  height: 800px;
+  width: 100%;
+}
+
+
+.content-container {
+  background-color: #800000;
+  padding: 2rem 3rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section2-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.section2-heading {
+  font-size: 13vw;
+  line-height: 0.8;
+  margin-top: 2.5rem;
+  font-family: blanquotey;
+  letter-spacing: 20px;
+  text-transform: uppercase;
+}
+
+.section2-container p{
+  color: #fff;
+  font-family: "Apercu Mono pro";
+}
+
+.nav-container {
+  display: flex;
+  flex-shrink: 0;
+  gap: 5rem;
+}
+
+.nav-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 50px;
+
+}
+
+.nav-column p {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: "Apercu Mono pro";
+  cursor: pointer;
+}
+
+.nav-title {
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Apercu Mono pro";
+}
+
+.nav-container {
+  padding: 16px;
+}
+
+.nav-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Space between items */
+}
+
+.nav-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: #ffffff80; /* Slightly dimmed text */
 }

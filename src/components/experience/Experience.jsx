@@ -21,9 +21,8 @@ export default function Experience() {
   const [currentScene] = useAtom(currentSceneAtom);
   const sheet = getProject("Fly Through", { state: ipad }).sheet("Scene");
 
-  console.log(currentScene);
   return (
-    <div>
+    <div className="canvas">
       <Canvas
         shadows
         gl={{
