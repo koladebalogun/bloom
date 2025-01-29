@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Banner from "./Banner";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Footer from "../Footer/Footer";
 
 export default function Content() {
   useEffect(() => {
@@ -117,12 +118,14 @@ const Section2 = () => {
   return (
     <div className="section-container">
       <div className="section-container-inner">
-        <h1 className="section-heading">Our Mission</h1>
-        <p>bloom scroll</p>
+        <h1 className="section-heading" data-aos="fade-up">
+          Our Mission
+        </h1>
+        <p data-aos="fade-up">bloom scroll</p>
       </div>
 
       <section className="header-info">
-        <p>
+        <p data-aos="fade-up">
           Our mission is to make technology a force for good by nurturing
           personal growth and strengthening our shared sense of community. Bloom
           is like a digital garden, where every interaction is a seed planted
@@ -147,7 +150,9 @@ const Section2 = () => {
           </h1>
 
           <div className="about-wrapper">
-            <h1 className="about-header" data-aos="fade-up">The culture of attention</h1>
+            <h1 className="about-header" data-aos="fade-up">
+              The culture of attention
+            </h1>
             <p data-aos="fade-up">
               Our attention has been turned into a commodity, hijacked by
               systems designed to feed on fear, insecurities, and a need for
@@ -164,7 +169,9 @@ const Section2 = () => {
           </div>
 
           <div className="about-wrapper">
-            <h1 className="about-header" data-aos="fade-up">Scrolling, But Different</h1>
+            <h1 className="about-header" data-aos="fade-up">
+              Scrolling, But Different
+            </h1>
             <p data-aos="fade-up">
               Bloom is designed to reflect and amplify our interconnectedness,
               serving as a digital ecosystem that nurtures alignment and
@@ -183,7 +190,9 @@ const Section2 = () => {
           </div>
 
           <div className="about-wrapper">
-            <h1 className="about-header" data-aos="fade-up">A New Kind of Technology</h1>
+            <h1 className="about-header" data-aos="fade-up">
+              A New Kind of Technology
+            </h1>
             <p data-aos="fade-up">
               Bloom is an experiment in what sacred technology could look like.
               It’s rooted in the belief that technology, when designed with
@@ -196,8 +205,12 @@ const Section2 = () => {
             </p>
           </div>
         </div>
+        <div className="indicator-wrapper2">
+          <div className="indicator2"></div>
+        </div>
       </section>
       <Banner />
+      <Footer />
     </div>
   );
 };

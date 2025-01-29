@@ -19,7 +19,7 @@ export default function ZoomParallax() {
 
   const pictures = [
     {
-      src: "/images/img1.jpg",
+      src: "/images/img12.jpg",
       scale: scale4,
     },
     {
@@ -27,7 +27,7 @@ export default function ZoomParallax() {
       scale: scale5,
     },
     {
-      src: "/images/img3.jpg",
+      src: "/images/img9.jpg",
       scale: scale6,
     },
     {
@@ -35,15 +35,15 @@ export default function ZoomParallax() {
       scale: scale5,
     },
     {
-      src: "/images/img5.jpg",
+      src: "/images/img11.jpg",
       scale: scale6,
     },
     {
-      src: "/images/img6.jpg",
+      src: "/images/img10.jpg",
       scale: scale8,
     },
     {
-      src: "/images/img7.jpg",
+      src: "/images/img13.jpg",
       scale: scale9,
     },
   ];

@@ -11,24 +11,22 @@ export default function Banner() {
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Animation for the background image
     gsap.fromTo(
       background.current,
-      { clipPath: "inset(20%)" }, // Starting state
+      { clipPath: "inset(20%)" },
       {
-        clipPath: "inset(-30%)", // Ending state
-        ease: "none", // Linear easing
+        clipPath: "inset(-30%)",
+        ease: "none",
         scrollTrigger: {
           trigger: background.current,
-          start: "top top", // Start when the top of the trigger hits the top of the viewport
-          end: "+=500px", // End after scrolling 500px
-          scrub: 1, // Smooth scrubbing (1 second delay for smoother transitions)
-          markers: true, // Debugging markers (remove in production)
+          start: "top top",
+          end: "+=500px",
+          scrub: 1,
+          markers: true,
         },
       }
     );
 
-    // Animation for the inner image
     gsap.fromTo(
       introImage.current,
       { scaleY: 1, y: -50 },
@@ -64,7 +62,7 @@ export default function Banner() {
   return (
     <div className="homeHeader">
       <div className="backgroundImage" ref={background}>
-        <img src={"/images/img1.jpg"} alt="background image" />
+        <img src={"/images/img12.jpg"} alt="background image" />
       </div>
       <div className="banner_intro">
         <div
@@ -73,10 +71,10 @@ export default function Banner() {
           data-scroll-speed="0.3"
           className="introImage"
         >
-          <img src={"/images/img1.jpg"} alt="intro image" />
+          <img src={"/images/img12.jpg"} alt="intro image" />
         </div>
         <h1 data-scroll data-scroll-speed="0.7" ref={text}>
-          Our Catalyst
+          Bloom Scroll
         </h1>
       </div>
     </div>

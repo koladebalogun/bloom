@@ -3,7 +3,6 @@ import { useAtom } from "jotai";
 import { currentSceneAtom } from "../../../utils/GlobalState";
 import gsap from "gsap";
 import CustomEase from "gsap/CustomEase";
-// import image1 from "../../images/image1.jpg";
 
 gsap.registerPlugin(CustomEase);
 
@@ -29,16 +28,13 @@ export default function InfoTwo() {
         "M0,0 C0.29,0 0.348,0.05 0.422,0.134 0.494,0.217 0.484,0.355 0.5,0.5 0.518,0.662 0.515,0.793 0.596,0.876 0.701,0.983 0.72,0.987 1,1"
       );
 
-      // Split text into spans for individual animations
       splitTextIntoSpans(".header h1");
 
-      // Animate the hero element
       gsap.to(".hero", {
         clipPath: "polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)",
         duration: 2,
         ease: "hop",
         onStart: () => {
-          // Ensure all transforms are combined into one gsap call
           gsap.to(".hero", {
             transform: "scale(1)",
             duration: 2.25,
@@ -104,7 +100,6 @@ export default function InfoTwo() {
           <div className="hero">
             <div className="overlay"></div>
             <div className="header">
-              {/* <h1>HELLO</h1> */}
 
               <p className="content">
                 Hi there! I’m Kolade Balogun, a front-end developer from Lagos,
@@ -116,7 +111,7 @@ export default function InfoTwo() {
             </div>
 
             <div className="hero-img">
-              <img src="/images/img1.jpg" alt="" />
+              <img src="/images/img12.jpg" alt="" />
             </div>
           </div>
         </div>

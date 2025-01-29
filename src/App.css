@@ -135,6 +135,51 @@ nav {
   animation: animate 1.5s linear infinite;
 }
 
+
+
+.indicator-wrapper2 {
+  position: absolute;
+  z-index: 1;
+  bottom: 70%;
+  right: 10%;
+}
+
+.indicator-wrapper2 p {
+  display: block;
+  /* text-align: center; */
+  font-size: 13px;
+  font-family: blanquotey;
+  font-weight: 700;
+  font-style: normal;
+  color: #000;
+  margin: 0 auto;
+  mix-blend-mode: difference;
+}
+
+.indicator2 {
+  z-index: 1;
+  position: relative;
+  width: 30px;
+  height: 60px;
+  border: 2px solid #000;
+  border-radius: 50px;
+  right: -30px;
+}
+
+.indicator2::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: red;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  border-radius: 50%;
+  animation: animate 1.5s linear infinite;
+}
+
 /* header */
 .header {
   position: absolute;
@@ -493,7 +538,7 @@ section.whitespace {
   position: relative;
   transform: translate(-50%, 0%);
   left: 35%;
-  margin-top: 325px;
+  top: 100px; /* Adjust this value as needed */
   width: 180px;
   height: 120px;
 }
@@ -523,14 +568,13 @@ section.website-content {
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: red;
   z-index: 10;
-  top: -13%;
-  padding: 20px;
+  padding: 20px; /* Adjust padding as needed */
+  margin-top: 50px; /* Add margin to create space after the revealer */
 }
 
 .website-content h1 {
-  font-size: 60px;
+  /* font-size: 60px; */
   letter-spacing: 10px;
   font-family: blanquotey;
   text-transform: uppercase;
@@ -540,15 +584,12 @@ section.website-content {
   font-size: 30px;
   color: #000;
   margin-top: 20px;
-  /* letter-spacing: 10px; */
-  /* font-family: blanquotey; */
-  /* text-transform: uppercase; */
 }
 
 .about {
-  font-size: 20px;
+  font-size: 30px;
   letter-spacing: 0;
-  /* font-family: tim; */
+
 }
 
 .about-wrapper{
@@ -558,6 +599,8 @@ section.website-content {
 .about-header {
   font-size: 40px;
   letter-spacing: 0;
+  text-decoration: underline;
+  text-decoration-color: red;
 
   /* font-family: tim; */
 }
@@ -607,6 +650,134 @@ section.website-content {
   object-fit: cover;
   object-position: top;
 }
+
+
+
+/* Footer */
+
+.footer {
+  position: relative;
+  height: 800px;
+  clip-path: polygon(0% 0, 100% 0%, 100% 100%, 0 100%);
+}
+
+.footer-inner {
+  position: fixed;
+  bottom: 0;
+  height: 800px;
+  width: 100%;
+}
+
+
+.content-wrapper {
+  background-color: #800000;
+  padding: 2rem 3rem;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.section2-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.section2-heading {
+  font-size: 13vw;
+  line-height: 0.8;
+  margin-top: 2.5rem;
+  font-family: blanquotey;
+  letter-spacing: 20px;
+  text-transform: uppercase;
+}
+
+.section2-container p{
+  color: #fff;
+  font-family: "Apercu Mono pro";
+}
+
+.nav-container {
+  display: flex;
+  flex-shrink: 0;
+  gap: 5rem;
+}
+
+.nav-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 50px;
+
+}
+
+.nav-column p {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: "Apercu Mono pro";
+  cursor: pointer;
+}
+
+.nav-title {
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Apercu Mono pro";
+}
+
+.nav-container {
+  padding: 16px;
+}
+
+.nav-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Space between items */
+}
+
+.nav-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: #ffffff80; /* Slightly dimmed text */
+}
+
+/* Copyable Text Styles */
+.copyable {
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.copyable:hover {
+  color: #f39c12; /* Example hover color */
+  text-decoration: none;
+}
+
+/* Copy Message Styles */
+.copy-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.copied-message {
+  position: absolute;
+  top: -1.5rem;
+  left: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  z-index: 10;
+  opacity: 0;
+  animation: fadeInOut 2s forwards;
+}
+
 
 @media only screen and (max-width: 850px) {
   .backgroundImage {
