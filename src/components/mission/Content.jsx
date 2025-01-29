@@ -5,6 +5,7 @@ import Banner from "./Banner";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "../Footer/Footer";
+import AboutIntro from "../about-us/AboutIntro";
 
 export default function Content() {
   useEffect(() => {
@@ -119,25 +120,29 @@ const Section2 = () => {
       </div>
 
       <section className="header-info">
-        <p data-aos="fade-up">
-          Our mission is to make technology a force for good by nurturing
-          personal growth and strengthening our shared sense of community. Bloom
-          is like a digital garden, where every interaction is a seed planted
-          for something greater—whether that’s gratitude, creativity, or
-          connection.
-        </p>
+        <div>
+          <p data-aos="fade-up">
+            Our mission is to make technology a force for good by nurturing
+            personal growth and strengthening our shared sense of community.
+            Bloom is like a digital garden, where every interaction is a seed
+            planted for something greater—whether that’s gratitude, creativity,
+            or connection.
+          </p>
+        </div>
+
+        <AboutIntro />
       </section>
 
-      <section className="whitespace"></section>
+      {/* <section className="whitespace"></section> */}
 
-      <section className="pinned">
+      {/* <section className="pinned">
         <div className="revealer">
           <div className="revealer-1"></div>
           <div className="revealer-2"></div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="website-content">
+      {/* <section className="website-content">
         <div>
           <h1 className="about" data-aos="fade-up">
             Every interaction with technology can help us bloom-
@@ -202,9 +207,9 @@ const Section2 = () => {
         <div className="indicator-wrapper2">
           <div className="indicator2"></div>
         </div>
-      </section>
-      <Banner />
-      <Footer />
+      </section> */}
+      {/* <Banner /> */}
+      {/* <Footer /> */}
     </div>
   );
 };

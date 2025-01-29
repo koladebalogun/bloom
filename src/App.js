@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import Experience from "./components/experience/Experience";
 import Logo from "./components/nav/Logo";
@@ -6,6 +7,9 @@ import { currentSceneAtom } from "./utils/GlobalState";
 import { useAtom } from "jotai";
 import CustomCursor from "./utils/CustomCursor";
 import ZoomParallax from "./components/zoomparallax/ZoomParallax";
+import Footer from "./components/Footer/Footer";
+import AboutIntro from "./components/about-us/AboutIntro";
+import About from "./page/About";
 
 function App() {
   const [currentScene] = useAtom(currentSceneAtom);
@@ -44,12 +48,20 @@ function App() {
 
   return (
     <div className="App">
-      {currentScene > 1 && <Logo />}
-      <CustomCursor />
+      {/* {currentScene > 1 && <Logo />}
+      <CustomCursor /> */}
       {/* <div ref={experienceRef} style={{ height: "100vh" }}>
         <Experience />
       </div> */}
-      <ZoomParallax />
+      
+      {/* <ZoomParallax /> */}
+      {/* <Footer /> */}
+      <Routes>
+        <Route path="/" element={<AboutIntro />} />
+        <Route path="/about" element={<About />} />
+        {/* Catch-all route for 404 pages */}
+        {/* <Route path="*" element={<NotFound />} /> */}
+      </Routes>
     </div>
   );
 }

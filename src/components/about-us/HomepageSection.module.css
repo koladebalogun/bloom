@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500;6..96,600&display=swap");
+@import url("https://fonts.cdnfonts.com/css/voyage");
+@import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');
+
+
+
+.gallerywrap {
+  background-color: grey;
+  /* background-image: url('/images/img3.jpg'); */
+  /* background-size: cover;
+  background-position: center; */
+  position: relative;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  height: 100vh;
+}
+
+.gallery {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.galleryitem {
+  width: 524px;
+  height: 640px;
+  overflow: hidden;
+  position: relative;
+  will-change: transform;
+  /* clip-path: inset(100% 0% 0% 0%); */
+  transition: clip-path 1s cubic-bezier(0.77, 0, 0.175, 1);
+  top: 50px;
+}
+
+.galleryitem:hover {
+  clip-path: inset(0% 0% 0% 0%);
+}
+
+.galleryitemimage {
+  background-size: cover;
+  background-position: center;
+  transform-origin: center;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+  transform: scale(1.1);
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  position: absolute;
+}
+
+.galleryitem:hover .galleryitemimage {
+  transform: scale(1);
+}
+
+.galleryitemimage img {
+  width: 100%;
+  height: 100%;
+}
+
+.galleryiteminfo {
+  position: absolute;
+  bottom: 10%;
+  z-index: 1;
+  transform: translateX(-20%);
+  color: #dbd8d6;
+  left: 15%;
+}
+
+.galleryinfotitle {
+  line-height: 6vw;
+  font-family: 'Megrim', cursive;
+  position: relative;
+  color: transparent;
+  font-weight: 400;
+  font-size: 5vw;
+  -webkit-text-stroke: 2px #dbd8d6;
+}
+
+.information {
+  position: absolute;
+  width: 100%;
+  bottom: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-family: 'Megrim', cursive;
+}
+
+.information .location span:nth-child(2) {
+  margin-left: 8px;
+}
+
+.location span:nth-child(2) {
+  margin-left: 16px;
+}
+
+#circle {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50% -50%);
+  color: black;
+  font-size: 10px;
+  -webkit-text-stroke: 1px grey;
+  transition: 0.5s ease-out;
+  font-weight: 500;
+}
+
+.projecttext{
+  position: absolute;
+  z-index: 1;
+  right: 20%;
+  font-size: 70px;
+  font-family: 'Bodoni Moda';
+  /* -webkit-text-stroke: 2px #000; */
+}
+
+.text{
+  position: absolute;
+  z-index: 1;
+  right: 2%;
+  bottom: 40%;
+  font-size: 22px;
+  font-weight: bold;
+  color: yellow;
+}
+
+.sepia {
+  filter: grayscale(100%) sepia(20%) brightness(80%);
+}
+
+.masked {
+  clip-path: circle(25% at 50% 50%);
+}
+
+
+/* Media Queries for Tablet and Mobile responsiveness */
+@media screen and (max-width: 1024px) {
+  /* .galleryitem {
+    width: 80%;
+  } */
+
+  .galleryinfotitle {
+    font-size: 4vw;
+  }
+
+  .projecttext {
+    font-size: 50px;
+    right: 5%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  .gallerywrap {
+    position: relative;
+    margin-top: 20px;
+    
+  }
+  .gallery {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .galleryitem {
+    width: 100vw;
+    height: 600px;
+  }
+
+  .information {
+    flex-direction: column;
+    align-items: flex-start;
+    bottom: 2%;
+  }
+
+  .location span:nth-child(2) {
+    margin-left: 8px;
+  }
+
+  #circle {
+    font-size: 8px;
+  }
+
+  .projecttext {
+    font-size: 45px;
+    /* right: 2%; */
+  }
+
+  .text{
+    position: absolute;
+    z-index: 1;
+    left: 2%;
+    bottom: 40%;
+    font-size: 20px;
+    font-weight: bold;
+    color: yellow;
+  }
+}
