@@ -39,7 +39,7 @@ const navItems = [
     const handleCopy = (text) => {
       navigator.clipboard.writeText(text);
       setCopiedText(text);
-      setTimeout(() => setCopiedText(''), 2000); // Clear message after 2 seconds
+      setTimeout(() => setCopiedText(''), 2000);
     };
   
     return (

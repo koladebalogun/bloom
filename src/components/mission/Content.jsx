@@ -14,7 +14,6 @@ export default function Content() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Pin the .pinned section
     ScrollTrigger.create({
       trigger: ".pinned",
       start: "top top",
@@ -24,7 +23,6 @@ export default function Content() {
       pinSpacing: false,
     });
 
-    // Pin the .header-info section
     ScrollTrigger.create({
       trigger: ".header-info",
       start: "top top",
@@ -34,7 +32,6 @@ export default function Content() {
       pinSpacing: false,
     });
 
-    // Rotate the .revealer element
     ScrollTrigger.create({
       trigger: ".pinned",
       start: "top top",
@@ -46,7 +43,6 @@ export default function Content() {
       },
     });
 
-    // Animate the clip-path of .revealer-1 and .revealer-2
     ScrollTrigger.create({
       trigger: ".pinned",
       start: "top top",
@@ -68,7 +64,6 @@ export default function Content() {
       },
     });
 
-    // Move the .revealer element horizontally
     ScrollTrigger.create({
       trigger: ".header-info",
       start: "top top",
@@ -85,7 +80,6 @@ export default function Content() {
       },
     });
 
-    // Scale the .revealer element
     ScrollTrigger.create({
       trigger: ".whitespace",
       start: "top 50%",

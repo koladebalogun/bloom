@@ -8,12 +8,6 @@ import { getProject } from "@theatre/core";
 import { SheetProvider, editable as e } from "@theatre/r3f";
 import { Center, ScrollControls, Text } from "@react-three/drei";
 import ipad from "../../utils/ipad.json";
-import BannerHeader from "../banner-info/headers/BannerHeader";
-import BannerHeader2 from "../banner-info/headers/BannerHeader2";
-import InfoOne from "../banner-info/contents/InfoOne";
-import InfoTwo from "../banner-info/contents/InfoTwo";
-import InfoThree from "../banner-info/contents/InfoThree";
-import BannerHeader3 from "../banner-info/headers/BannerHeader3";
 import Headers from "../banner-info/headers/Headers";
 import SceneInfo from "../banner-info/contents/SceneInfo";
 

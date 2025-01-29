@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Ipad from "../models/Ipad";
-import { OrbitControls, useScroll } from "@react-three/drei";
+import { useScroll } from "@react-three/drei";
 import { val } from "@theatre/core";
 import {
   PerspectiveCamera,
@@ -23,7 +23,6 @@ export default function BannerScene() {
   const currentPageRef = useRef(currentPage);
   const currentSceneRef = useRef(currentScene);
 
-  // Update refs instead of causing re-renders
   useEffect(() => {
     currentPageRef.current = currentPage;
     currentSceneRef.current = currentScene;
@@ -47,7 +46,6 @@ export default function BannerScene() {
   });
   return (
     <>
-      {/* <OrbitControls /> */}
       <directionalLight intensity={20} position={[-20, -50, 60]} />
       <ambientLight intensity={5} />
       <e.group theatreKey="ipad">
