@@ -466,9 +466,11 @@ img {
 
 .header-info p {
   padding: 1em;
-  font-family: pp;
-  font-size: 52px;
+  font-family: "Apercu Mono pro";
+  font-size: 40px;
   font-weight: lighter;
+  word-spacing: 5px;
+  margin-top: 60px;
 }
 
 section.pinned {
@@ -523,7 +525,7 @@ section.website-content {
   height: 100%;
   background-color: red;
   z-index: 10;
-  top: -10%;
+  top: -13%;
   padding: 20px;
 }
 
@@ -535,16 +537,28 @@ section.website-content {
 }
 
 .website-content p {
-  font-size: 20px;
+  font-size: 30px;
   color: #000;
+  margin-top: 20px;
   /* letter-spacing: 10px; */
   /* font-family: blanquotey; */
   /* text-transform: uppercase; */
 }
 
 .about {
-  font-size: 50px;
+  font-size: 20px;
   letter-spacing: 0;
+  /* font-family: tim; */
+}
+
+.about-wrapper{
+  margin-top: 120px;
+}
+
+.about-header {
+  font-size: 40px;
+  letter-spacing: 0;
+
   /* font-family: tim; */
 }
 
@@ -553,7 +567,7 @@ section.website-content {
   width: 100%;
   display: flex;
   justify-content: center;
-  top: -70vh;
+  top: -80vh;
 }
 
 .backgroundImage {

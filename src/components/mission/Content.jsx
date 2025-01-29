@@ -2,8 +2,14 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Banner from "./Banner";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Content() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -117,10 +123,11 @@ const Section2 = () => {
 
       <section className="header-info">
         <p>
-          Welcome to Duke n Earls, where fashion meets class. We are the epitome
-          of African fashion, blending tradition and innovation seamlessly. We
-          strive to be the go-to brand for those who appreciate the richness of
-          African culture and the allure of high-class fashion.
+          Our mission is to make technology a force for good by nurturing
+          personal growth and strengthening our shared sense of community. Bloom
+          is like a digital garden, where every interaction is a seed planted
+          for something greater—whether that’s gratitude, creativity, or
+          connection.
         </p>
       </section>
 
@@ -135,19 +142,59 @@ const Section2 = () => {
 
       <section className="website-content">
         <div>
-          <h1 className="about">About us</h1>
-          <p>
-            At Duke n Earl, we're passionate about creating a fashion experience
-            that goes beyond just clothing. From the moment you explore our
-            collections to the moment you wear our designs, we want you to feel
-            confident, valued, and proud of your choice. Every piece we offer is
-            thoughtfully crafted with quality and style in mind, so you can
-            express yourself with ease. Our team is always here to help, whether
-            you need advice on styling or have questions about your order. We’re
-            dedicated to making your journey with us memorable, because at Duke
-            n Earl, it’s not just about fashion it’s about how you feel wearing
-            it.
-          </p>
+          <h1 className="about" data-aos="fade-up">
+            Every interaction with technology can help us bloom-
+          </h1>
+
+          <div className="about-wrapper">
+            <h1 className="about-header" data-aos="fade-up">The culture of attention</h1>
+            <p data-aos="fade-up">
+              Our attention has been turned into a commodity, hijacked by
+              systems designed to feed on fear, insecurities, and a need for
+              validation. These platforms create a cycle of distraction and
+              scarcity, leaving us disconnected from our natural flow.
+              <br />
+              <br />
+              Bloom is our attempt to build a rhizomatic space—a platform where
+              inspiring ideas, actions, and connections can spread naturally, in
+              alignment with the people and communities who use it. Rhizomes are
+              horizontal, interconnected, and resilient—the opposite of a
+              hierarchical tree, and allowing for organic, collective growth.
+            </p>
+          </div>
+
+          <div className="about-wrapper">
+            <h1 className="about-header" data-aos="fade-up">Scrolling, But Different</h1>
+            <p data-aos="fade-up">
+              Bloom is designed to reflect and amplify our interconnectedness,
+              serving as a digital ecosystem that nurtures alignment and
+              collective growth. Through Bloomscrolling, every interaction
+              becomes part of a larger, living network, helping humanity grow
+              stronger, more resilient, and more attuned to its highest
+              potential.
+              <br />
+              <br />
+              Bloom is not a grid of ads and algorithms but a living, breathing
+              network that uplifts everyone it touches. We want the Bloomscroll
+              to be a tool for resonance—a way to align with higher states like
+              gratitude, creativity, and compassion. Imagine scrolling not to
+              escape, but to expand.
+            </p>
+          </div>
+
+          <div className="about-wrapper">
+            <h1 className="about-header" data-aos="fade-up">A New Kind of Technology</h1>
+            <p data-aos="fade-up">
+              Bloom is an experiment in what sacred technology could look like.
+              It’s rooted in the belief that technology, when designed with
+              love, can serve as an extension of the exocortex—a tool for
+              externalizing and amplifying our best thoughts, ideas, and
+              actions. But it’s also an experiment and a direct challenge to the
+              culture of mindless engagement, that asks: what happens when we
+              build for resonance instead of clicks? For impact instead of
+              endless interaction?
+            </p>
+          </div>
         </div>
       </section>
       <Banner />

@@ -31,31 +31,31 @@ export default function Banner() {
     // Animation for the inner image
     gsap.fromTo(
       introImage.current,
-      { scaleY: 1, y: -50 }, // Starting state
+      { scaleY: 1, y: -50 },
       {
         scaleX: 1,
-        y: 10, // Ending state
-        ease: "none", // Linear easing
+        y: 10,
+        ease: "none",
         scrollTrigger: {
           trigger: background.current,
-          start: "top top", // Start when the top of the trigger hits the top of the viewport
-          end: "+=500px", // End after scrolling 500px
-          scrub: 1, // Smooth scrubbing (1 second delay for smoother transitions)
+          start: "top top",
+          end: "+=500px",
+          scrub: 1,
         },
       }
     );
 
     gsap.fromTo(
       text.current,
-      { y: -50 }, // Starting state
+      { y: -50 },
       {
-        y: 300, // Ending state
-        ease: "none", // Linear easing
+        y: 300,
+        ease: "none",
         scrollTrigger: {
           trigger: background.current,
-          start: "top top", // Start when the top of the trigger hits the top of the viewport
-          end: "+=500px", // End after scrolling 500px
-          scrub: 1, // Smooth scrubbing (1 second delay for smoother transitions)
+          start: "top top",
+          end: "+=500px",
+          scrub: 1,
         },
       }
     );
