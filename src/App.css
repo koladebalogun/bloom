@@ -442,7 +442,7 @@ img {
   color: #fff;
 }
 
-.section-container p {
+.section-container-inner-text {
   color: #fff;
   font-family: "Apercu Mono pro";
 }
@@ -450,7 +450,7 @@ img {
 .header-info {
   width: 100%;
   height: 100%;
-  position: relative;
+  /* position: relative; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -458,7 +458,7 @@ img {
   color: #fff;
 }
 
-.header-info p {
+.header-text {
   padding: 1em;
   font-family: "Apercu Mono pro";
   font-size: 40px;
@@ -825,7 +825,7 @@ section.website-content {
     font-size: 60px;
   }
 
-  .header-info p {
+  .header-text {
     padding: 20px;
     font-size: 20px;
     word-spacing: normal;

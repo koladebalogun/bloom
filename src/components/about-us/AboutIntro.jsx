@@ -39,11 +39,21 @@ const GalleryItem = ({ imageDetails }) => {
       });
     };
 
-    mouseRef.current.addEventListener("mousemove", (mouse) => {
-      window.requestAnimationFrame(() => {
-        getCoordinates(mouse);
-      });
-    });
+    const currentMouseRef = mouseRef.current;
+
+    if (currentMouseRef) {
+      const handleMouseMove = (mouse) => {
+        window.requestAnimationFrame(() => {
+          getCoordinates(mouse);
+        });
+      };
+
+      currentMouseRef.addEventListener("mousemove", handleMouseMove);
+
+      return () => {
+        currentMouseRef.removeEventListener("mousemove", handleMouseMove);
+      };
+    }
   }, []);
 
   return (
@@ -59,7 +69,7 @@ const GalleryItem = ({ imageDetails }) => {
         mouseContext.setSize("small");
       }}
     >
-      <Link to="/about">
+      <a href="/about">
         <div
           className={`${styles.galleryitem}`}
           ref={ref}
@@ -89,7 +99,7 @@ const GalleryItem = ({ imageDetails }) => {
             data-scroll
           ></div>
         </div>
-      </Link>
+      </a>
       <motion.div
         exit={{ opacity: 0 }}
         transition={transition}
@@ -108,8 +118,8 @@ const ProjectGallery = () => {
   return (
     <section className={styles.gallerywrap} data-scroll-section>
       <div className={`${styles.gallery} gallery`}>
-        <h3 className={styles.projecttext}>About BARON-INC</h3>
-        <p className={styles.text}>Please click on the image to know our story and mission</p>
+        <h3 className={styles.projecttext}>About BLOOm-sCROLL</h3>
+        <p className={styles.subtext}>Please click on the image to know our story and mission</p>
         <GalleryItem imageDetails={imageDetails} />
       </div>
     </section>

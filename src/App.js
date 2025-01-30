@@ -11,6 +11,15 @@ import Footer from "./components/Footer/Footer";
 import AboutIntro from "./components/about-us/AboutIntro";
 import About from "./page/About";
 
+
+const ExperienceWrapper = () => {
+  return (
+    <div style={{ height: "100vh" }}>
+      <Experience />
+    </div>
+  );
+};
+
 function App() {
   const [currentScene] = useAtom(currentSceneAtom);
   const experienceRef = useRef(null);
@@ -48,16 +57,15 @@ function App() {
 
   return (
     <div className="App">
-      {/* {currentScene > 1 && <Logo />}
-      <CustomCursor /> */}
+      {currentScene > 1 && <Logo />}
+      <CustomCursor />
       {/* <div ref={experienceRef} style={{ height: "100vh" }}>
         <Experience />
       </div> */}
-      
+
       {/* <ZoomParallax /> */}
-      {/* <Footer /> */}
       <Routes>
-        <Route path="/" element={<AboutIntro />} />
+        <Route path="/" element={<ExperienceWrapper />} />
         <Route path="/about" element={<About />} />
         {/* Catch-all route for 404 pages */}
         {/* <Route path="*" element={<NotFound />} /> */}

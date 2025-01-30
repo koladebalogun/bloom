@@ -2,6 +2,7 @@ import React from "react";
 import AboutBanner from "../components/about-us/AboutBanner";
 import Projects from "../components/projects/Projects";
 import Footer from "../components/Footer/Footer"
+import ZoomParallax from "../components/zoomparallax/ZoomParallax";
 
 export default function About() {
   return (

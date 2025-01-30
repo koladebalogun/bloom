@@ -5,7 +5,7 @@
 
 
 .gallerywrap {
-  background-color: grey;
+  background-color: red;
   /* background-image: url('/images/img3.jpg'); */
   /* background-size: cover;
   background-position: center; */
@@ -28,7 +28,7 @@
   overflow: hidden;
   position: relative;
   will-change: transform;
-  /* clip-path: inset(100% 0% 0% 0%); */
+  clip-path: inset(0% 0% 0% 0%);
   transition: clip-path 1s cubic-bezier(0.77, 0, 0.175, 1);
   top: 50px;
 }
@@ -112,13 +112,13 @@
 .projecttext{
   position: absolute;
   z-index: 1;
-  right: 20%;
-  font-size: 70px;
+  right: 10%;
+  font-size: 60px;
   font-family: 'Bodoni Moda';
-  /* -webkit-text-stroke: 2px #000; */
+  color: #fff;
 }
 
-.text{
+.subtext{
   position: absolute;
   z-index: 1;
   right: 2%;

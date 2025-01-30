@@ -1,6 +1,7 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import Mission from "../mission/Mission";
+import AboutIntro from "../about-us/AboutIntro"
 
 export default function ZoomParallax() {
   const [isInView, setIsInView] = useState(false);
@@ -63,9 +64,8 @@ export default function ZoomParallax() {
           })}
         </div>
       </div>
-
       <Mission />
-      
+
     </>
   );
 }
