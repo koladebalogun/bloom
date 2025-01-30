@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Signika:wght@400;500;600&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');
 
-/* @font-face {
-  font-family: m;
-  src: url(../fonts/Mitera\ Regular.otf);
-} */
+@font-face {
+  font-family: blanquotey;
+  src: url("/public/fonts/Blanquotey.ttf");
+}
 
 
 .mainwrapper {
@@ -168,11 +168,12 @@
 }
 
 .itemname {
-  font-size: 40px;
+  font-size: 30px;
+  font-family: blanquotey;
 }
 
 .itemname span {
-  font-family: "Signika";
+  font-family: blanquotey;
   font-size: 20px;
   line-height: 120%;
   text-transform: uppercase;

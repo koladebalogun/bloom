@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import styles from "./Projects.module.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -104,27 +106,33 @@ export default function Projects() {
       <div className={styles.mainwrapper} ref={containerRef}>
         <section className={styles.section} ref={sectionRef}>
           <div className={styles.sectioninner}>
-            <img src="/images/img1.jpg" className={styles.video1} ref={video1Ref} />
-            <img
-              src="/images/img1.jpg"
-              // autoPlay
-              // muted
-              // loop
+            <video
+              src="/images/bloom2.mp4"
+              className={styles.video1}
+              ref={video1Ref}
+              autoPlay
+              muted
+              loop
+            />
+            <video
+              src="/images/bloom.mp4"
+              autoPlay
+              muted
+              loop
               className={styles.video2}
               ref={video2Ref}
             />
 
             <div className={styles.titleContainer} ref={titleRef}>
               <div className={styles.title}>
-                <h1>Artists we&apos;ve worked with {">"}</h1>
+                <h1>Our Features {">"}</h1>
               </div>
             </div>
           </div>
         </section>
 
         <section className={styles.section2}>
-          <div className={styles.nav}>
-          </div>
+          <div className={styles.nav}></div>
           <div className={styles.container}>
             <div className={styles.items}>
               <div className={styles.item}>
@@ -132,7 +140,7 @@ export default function Projects() {
                   <img src="/images/img11.jpg" alt="" />
                   <div className={styles.imageoverlay}></div>
                   <div className={styles.itemcopy}>
-                    <div className={styles.itemname}>Seyi Vibez</div>
+                    <div className={styles.itemname}>Aligned Content</div>
                     {/* <div className={styles.id}>1</div> */}
                   </div>
                 </div>
@@ -143,7 +151,7 @@ export default function Projects() {
                   <img src="/images/img12.jpg" alt="" />
                   <div className={styles.imageoverlay}></div>
                   <div className={styles.itemcopy}>
-                    <div className={styles.itemname}>Mayorkun</div>
+                    <div className={styles.itemname}>Community Centric</div>
                     {/* <div className={styles.id}>2</div> */}
                   </div>
                 </div>
@@ -154,7 +162,7 @@ export default function Projects() {
                   <img src="/images/img13.jpg" alt="" />
                   <div className={styles.imageoverlay}></div>
                   <div className={styles.itemcopy}>
-                    <div className={styles.itemname}>Tekno</div>
+                    <div className={styles.itemname}>Sacred Technology</div>
                     {/* <div className={styles.id}>3</div> */}
                   </div>
                 </div>
@@ -165,7 +173,7 @@ export default function Projects() {
                   <img src="/images/img10.jpg" alt="" />
                   <div className={styles.imageoverlay}></div>
                   <div className={styles.itemcopy}>
-                    <div className={styles.itemname}>Bella Schmurda</div>
+                    <div className={styles.itemname}>Resonance</div>
                     {/* <div className={styles.id}>4</div> */}
                   </div>
                 </div>
@@ -173,6 +181,8 @@ export default function Projects() {
             </div>
           </div>
         </section>
+
+        
       </div>
     </>
   );

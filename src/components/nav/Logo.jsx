@@ -49,7 +49,7 @@ export default function Logo() {
   return (
     <nav>
       <div className="logo">
-        <h1>bloom-scroll</h1>
+        <h1>BLOOm-sCROLL</h1>
       </div>      
     </nav>
   );

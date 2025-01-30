@@ -21,7 +21,7 @@ const Section2 = () => {
   return (
     <div className="section2-container">
       <h1 className="section2-heading">Contact us</h1>
-      <p>bloom scroll</p>
+      <p>BLOOm sCROLL</p>
     </div>
   );
 };

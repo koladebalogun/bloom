@@ -1,5 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { motion, useViewportScroll, useTransform } from "framer-motion";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 
@@ -41,8 +43,33 @@ export default function AboutBanner() {
   const [windowWidth, setWindowWidth] = useState(null);
   const { scrollYProgress } = useViewportScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
+  const [isInView, setIsInView] = useState(false);
+  const boxRef = useRef(null);
 
   const [canScroll, setCanScroll] = useState(true);
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.5 } // Trigger when 50% of the box is in view
+    );
+
+    if (boxRef.current) {
+      observer.observe(boxRef.current);
+    }
+
+    return () => {
+      if (boxRef.current) {
+        observer.unobserve(boxRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     if (canScroll === false) {
@@ -84,18 +111,18 @@ export default function AboutBanner() {
               <motion.div className="model">
                 <motion.span className="first" variants={firstName}>
                   <motion.span variants={letter}>B</motion.span>
-                  <motion.span variants={letter}>A</motion.span>
-                  <motion.span variants={letter}>R</motion.span>
+                  <motion.span variants={letter}>L</motion.span>
                   <motion.span variants={letter}>O</motion.span>
-                  <motion.span variants={letter}>N</motion.span>
+                  <motion.span variants={letter}>O</motion.span>
+                  <motion.span variants={letter}>m</motion.span>
                 </motion.span>
                 <motion.span className="last" variants={lastName}>
-                  <motion.span variants={letter}>E</motion.span>
-                  <motion.span variants={letter}>V</motion.span>
-                  <motion.span variants={letter}>E</motion.span>
-                  <motion.span variants={letter}>N</motion.span>
-                  <motion.span variants={letter}>T</motion.span>
-                  <motion.span variants={letter}>S</motion.span>
+                  <motion.span variants={letter}>s</motion.span>
+                  <motion.span variants={letter}>C</motion.span>
+                  <motion.span variants={letter}>R</motion.span>
+                  <motion.span variants={letter}>O</motion.span>
+                  <motion.span variants={letter}>L</motion.span>
+                  <motion.span variants={letter}>L</motion.span>
                 </motion.span>
               </motion.div>
             </div>
@@ -110,9 +137,9 @@ export default function AboutBanner() {
                     height: imageDetails.height,
                   }}
                   animate={{
-                    y: 50,
+                    y: -100,
                     width: "100%",
-                    height: windowWidth && windowWidth > 1440 ? 800 : 400,
+                    height: windowWidth && windowWidth > 1440 ? 900 : 600,
                     transition: { delay: 0.2, ...transition },
                   }}
                   className="thumbnail-single"
@@ -142,10 +169,14 @@ export default function AboutBanner() {
             </div>
           </div>
         </div>
-        <div className="detailed-information">
+
+        <div
+          ref={boxRef}
+          className={`detailed-information ${isInView ? "in-view" : ""}`}
+        >
           <div className="container">
-            <div className="text">
-              {/* <p>
+            <div className="detailed-information-text" data-aos="fade-up">
+              <p>
                 Baron Inc Entertainment is dynamic music company established in
                 2019 that specializes in the discovery, development, and
                 promotion of Afrobeats & Francophone artists. We are also
@@ -162,15 +193,15 @@ export default function AboutBanner() {
                 <br />
                 At Baron-inc Events, we’re driven by a passion for delivering
                 unparalleled experiences in entertainment. From curating
-                unforgettable events to nurturing top-tier talents, we’re here to
-                bring your visions to life and help you achieve your goals.
+                unforgettable events to nurturing top-tier talents, we’re here
+                to bring your visions to life and help you achieve your goals.
                 Every project we undertake is thoughtfully crafted with
                 precision and creativity, ensuring that you feel empowered,
                 celebrated, and at the center of the action. Our team is
                 dedicated to providing exceptional support, whether you’re an
                 entertainer, or enthusiast. At Baron-inc, it’s about creating a
                 legacy worth remembering.
-              </p> */}
+              </p>
             </div>
           </div>
         </div>

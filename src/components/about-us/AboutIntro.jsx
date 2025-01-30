@@ -4,6 +4,7 @@ import { CursorContext } from "../CustomCursor/CursorManager";
 import useOnScreen from "../../utils/useOnscreen";
 import { motion } from "framer-motion";
 import styles from "./HomepageSection.module.css";
+import { Link } from "react-router-dom";
 
 const GalleryItem = ({ imageDetails }) => {
   const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
@@ -58,7 +59,7 @@ const GalleryItem = ({ imageDetails }) => {
         mouseContext.setSize("small");
       }}
     >
-      <a href="/about">
+      <Link to="/about">
         <div
           className={`${styles.galleryitem}`}
           ref={ref}
@@ -88,7 +89,7 @@ const GalleryItem = ({ imageDetails }) => {
             data-scroll
           ></div>
         </div>
-      </a>
+      </Link>
       <motion.div
         exit={{ opacity: 0 }}
         transition={transition}

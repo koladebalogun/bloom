@@ -74,7 +74,7 @@ export default function Banner() {
           <img src={"/images/img12.jpg"} alt="intro image" />
         </div>
         <h1 data-scroll data-scroll-speed="0.7" ref={text}>
-          Bloom Scroll
+          BLOOm sCROLL
         </h1>
       </div>
     </div>

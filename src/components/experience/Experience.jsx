@@ -42,7 +42,7 @@ export default function Experience() {
                     fontSize={28}
                     font="fonts/Blanquotey.ttf"
                   >
-                    BLOOM SCROLL
+                    BLOOm sCROLL
                   </Text>
                 </Center>
               </e.group>
