@@ -11,13 +11,13 @@ import checkroll from "../../utils/checkroll.json";
 import Headers from "../banner-info/headers/Headers";
 import SceneInfo from "../banner-info/contents/SceneInfo";
 import ZoomParallax from "../zoomparallax/ZoomParallax";
-import intro1 from "../../utils/intro1.json";
+import intro2 from "../../utils/intro2.json";
 import BannerHeader from "../banner-info/headers/BannerHeader";
 import gsap from "gsap";
 
 export default function Experience() {
   const [currentScene] = useAtom(currentSceneAtom);
-  const sheet = getProject("Fly Through", { state: "" }).sheet("Scene");
+  const sheet = getProject("Fly Through", { state: intro2 }).sheet("Scene");
   const textRef = useRef()
 
   console.log(currentScene);
@@ -49,12 +49,12 @@ export default function Experience() {
             <SheetProvider sheet={sheet}>
               <BannerScene />
 
-              {/* {currentScene > 1 && (
+              {currentScene > 1 && (
                 <>
                   <e.group theatreKey="text" ref={textRef}>
                     <Center>
                       <Text
-                        position={[17, 4, -30]}
+                        position={[17, 4, -40]}
                         color="white"
                         fontSize={28}
                         font="fonts/Blanquotey.ttf"
@@ -64,7 +64,7 @@ export default function Experience() {
                     </Center>
                   </e.group>
                 </>
-              )} */}
+              )}
             </SheetProvider>
           </ScrollControls>
         </Canvas>
