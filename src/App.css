@@ -185,6 +185,7 @@ nav {
   left: 0;
   clip-path: polygon(0% 100%, 100% 100%, 100% 0, 0 0);
   z-index: 1;
+  color: #fff;
 }
 
 .header h1 {
@@ -195,18 +196,19 @@ nav {
   margin: 0;
   padding: 0;
   line-height: 100%;
+  color: #fff;
 }
 
 .header h1 span {
   position: relative;
   display: inline-block;
   transform: translateY(100px);
-  font-size: 4vw;
+  font-size: 7vw;
   opacity: 0;
-  color: #28282b;
+  color: #fff;
   top: 14px;
   letter-spacing: 10px;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 /* ////// */

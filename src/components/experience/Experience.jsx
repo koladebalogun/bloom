@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { SRGBColorSpace, ACESFilmicToneMapping } from "three";
 import BannerScene from "../scene/BannerScene";
 import { useAtom } from "jotai";
@@ -7,14 +7,27 @@ import { currentSceneAtom } from "../../utils/GlobalState";
 import { getProject } from "@theatre/core";
 import { SheetProvider, editable as e } from "@theatre/r3f";
 import { Center, ScrollControls, Text } from "@react-three/drei";
-import ipad from "../../utils/ipad.json";
+import checkroll from "../../utils/checkroll.json";
 import Headers from "../banner-info/headers/Headers";
 import SceneInfo from "../banner-info/contents/SceneInfo";
 import ZoomParallax from "../zoomparallax/ZoomParallax";
+import intro1 from "../../utils/intro1.json";
+import BannerHeader from "../banner-info/headers/BannerHeader";
+import gsap from "gsap";
 
 export default function Experience() {
   const [currentScene] = useAtom(currentSceneAtom);
-  const sheet = getProject("Fly Through", { state: ipad }).sheet("Scene");
+  const sheet = getProject("Fly Through", { state: "" }).sheet("Scene");
+  const textRef = useRef()
+
+  console.log(currentScene);
+
+  useEffect(() => {
+    gsap.to(textRef.current, {
+      y:-50,
+      ease: 'bounce'
+    })
+  },[])
 
   return (
     <>
@@ -29,32 +42,36 @@ export default function Experience() {
             width: "100%",
             height: "100vh",
             overflow: "hidden",
+            backgroundColor: "black",
           }}
         >
-          <ScrollControls pages={4} maxSpeed={0.1}>
+          <ScrollControls pages={10} maxSpeed={0.1}>
             <SheetProvider sheet={sheet}>
               <BannerScene />
 
-              {currentScene && (
-                <e.group theatreKey="text">
-                  <Center>
-                    <Text
-                      position={[17, 4, -30]}
-                      color="white"
-                      fontSize={28}
-                      font="fonts/Blanquotey.ttf"
-                    >
-                      BLOOm sCROLL
-                    </Text>
-                  </Center>
-                </e.group>
-              )}
+              {/* {currentScene > 1 && (
+                <>
+                  <e.group theatreKey="text" ref={textRef}>
+                    <Center>
+                      <Text
+                        position={[17, 4, -30]}
+                        color="white"
+                        fontSize={28}
+                        font="fonts/Blanquotey.ttf"
+                      >
+                        BLOOm sCROLL
+                      </Text>
+                    </Center>
+                  </e.group>
+                </>
+              )} */}
             </SheetProvider>
           </ScrollControls>
         </Canvas>
 
-        <Headers />
-        <SceneInfo />
+        {/* <Headers /> */}
+        {/* <SceneInfo /> */}
+        {/* {currentScene === 5 && <BannerHeader />} */}
 
         <div className="indicator-wrapper">
           <p>Scroll Down</p>
@@ -62,7 +79,7 @@ export default function Experience() {
         </div>
       </div>
 
-      <ZoomParallax />
+      {/* <ZoomParallax /> */}
     </>
   );
 }

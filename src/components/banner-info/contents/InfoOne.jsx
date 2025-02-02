@@ -10,7 +10,7 @@ export default function InfoOne() {
   const [currentScene] = useAtom(currentSceneAtom);
 
   useEffect(() => {
-    if (currentScene === 2) {
+    if (currentScene === 5) {
       gsap.fromTo(
         ".containerOne",
         { opacity: 0, x: 50 },
@@ -95,7 +95,7 @@ export default function InfoOne() {
 
   return (
     <div>
-      {currentScene === 2 && (
+      {currentScene === 5 && (
         <div className="containerOne">
           <div className="hero">
             <div className="overlay"></div>

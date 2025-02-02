@@ -1,6 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import Ipad from "../models/Ipad";
-import { useScroll } from "@react-three/drei";
+import React, { Suspense, useEffect, useRef } from "react";
+import { Environment, OrbitControls, useScroll } from "@react-three/drei";
 import { val } from "@theatre/core";
 import {
   PerspectiveCamera,
@@ -10,6 +9,8 @@ import {
 import { useAtom } from "jotai";
 import { currentPageAtom, currentSceneAtom } from "../../utils/GlobalState";
 import { useFrame } from "@react-three/fiber";
+import Fibonacci from "../models/Fibonacci";
+import Lotus from "../models/Lotus";
 
 export default function BannerScene() {
   const sheet = useCurrentSheet();
@@ -28,7 +29,6 @@ export default function BannerScene() {
     currentSceneRef.current = currentScene;
   }, [currentPage, currentScene]);
 
-
   const logCurrentPage = () => {
     const page = Math.floor(scroll.offset * scroll.pages) + 1;
     const positionWithinPage = (scroll.offset * scroll.pages) % 1;
@@ -46,16 +46,26 @@ export default function BannerScene() {
   });
   return (
     <>
-      <directionalLight intensity={20} position={[-20, -50, 60]} />
-      <ambientLight intensity={5} />
-      <e.group theatreKey="ipad">
-        <Ipad />
+      <Suspense fallback={null}>
+        {/* Lazy load the HDR environment map */}
+        <Environment files={"/env/map.hdr"} />
+      </Suspense>
+
+      <directionalLight intensity={0.5} position={[5, 10, 7]} />
+      <ambientLight intensity={1} />
+
+      <e.group theatreKey="fibonacci">
+        <Fibonacci />
+      </e.group>
+
+      <e.group theatreKey="lotus">
+        <Lotus />
       </e.group>
 
       <PerspectiveCamera
         theatreKey="camera"
         makeDefault
-        position={[0, 0, 0]}
+        position={[2, 0, 0]}
         near={0.1}
         far={100}
       />
