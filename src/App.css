@@ -23,6 +23,7 @@ body,
   height: 100vh;
   margin: 0;
   padding: 0;
+  background: #000;
 }
 
 ::-webkit-scrollbar {
@@ -84,7 +85,7 @@ nav {
   transform: translateY(100px);
   font-size: 1vw;
   opacity: 0;
-  color: #28282b;
+  color: #fff;
   top: 14px;
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -106,7 +107,7 @@ nav {
   font-family: blanquotey;
   font-weight: 700;
   font-style: normal;
-  color: #000;
+  color: #fff;
   margin: 0 auto;
   mix-blend-mode: difference;
 }
@@ -116,7 +117,7 @@ nav {
   position: relative;
   width: 30px;
   height: 60px;
-  border: 2px solid #000;
+  border: 2px solid #fff;
   border-radius: 50px;
   right: -30px;
 }
@@ -208,7 +209,7 @@ nav {
   color: #fff;
   top: 14px;
   letter-spacing: 10px;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
 }
 
 /* ////// */
@@ -905,8 +906,9 @@ section.website-content {
   display: inline-block;
   position: relative;
   font-weight: 400;
-  font-size: 224px;
+  font-size: 230px;
   font-family: blanquotey;
+  color: #fff;
 }
 
 @media (max-width: 1440px) {

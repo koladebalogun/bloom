@@ -49,9 +49,9 @@ export default function Experience() {
             <SheetProvider sheet={sheet}>
               <BannerScene />
 
-              {currentScene > 1 && (
+              {/* {currentScene > 1 && (
                 <>
-                  <e.group theatreKey="text" ref={textRef}>
+                  <e.group theatreKey="3Dtext" ref={textRef}>
                     <Center>
                       <Text
                         position={[17, 4, -40]}
@@ -64,14 +64,14 @@ export default function Experience() {
                     </Center>
                   </e.group>
                 </>
-              )}
+              )} */}
             </SheetProvider>
           </ScrollControls>
         </Canvas>
 
         {/* <Headers /> */}
-        {/* <SceneInfo /> */}
-        {/* {currentScene === 5 && <BannerHeader />} */}
+        {currentScene > 9 && <BannerHeader />}
+        <SceneInfo />
 
         <div className="indicator-wrapper">
           <p>Scroll Down</p>
@@ -79,7 +79,7 @@ export default function Experience() {
         </div>
       </div>
 
-      {/* <ZoomParallax /> */}
+      <ZoomParallax />
     </>
   );
 }

@@ -114,10 +114,10 @@ export default function AboutBanner() {
                   <motion.span variants={letter}>L</motion.span>
                   <motion.span variants={letter}>O</motion.span>
                   <motion.span variants={letter}>O</motion.span>
-                  <motion.span variants={letter}>m</motion.span>
+                  <motion.span variants={letter}>M</motion.span>
                 </motion.span>
                 <motion.span className="last" variants={lastName}>
-                  <motion.span variants={letter}>s</motion.span>
+                  <motion.span variants={letter}>S</motion.span>
                   <motion.span variants={letter}>C</motion.span>
                   <motion.span variants={letter}>R</motion.span>
                   <motion.span variants={letter}>O</motion.span>
@@ -177,30 +177,24 @@ export default function AboutBanner() {
           <div className="container">
             <div className="detailed-information-text" data-aos="fade-up">
               <p>
-                Baron Inc Entertainment is dynamic music company established in
-                2019 that specializes in the discovery, development, and
-                promotion of Afrobeats & Francophone artists. We are also
-                actively involved in the production and promotion of musical
-                concerts across the UK, hosting notable Afrobeats stars. Baron
-                Inc Entertainment prides itself on identifying promising talent
-                and nurturing them through every step of their artistic journey.
-                The company’s touring and A&R experts actively scout emerging
-                and established musicians, providing them with creative
-                direction and industry insights to help refine their sound and
-                stand out in a crowded market, also providing them with the
-                structure to tour across UK & Europe.
+                Bloom is a new kind of digital platform designed to help people
+                feel more connected, inspired, and aligned in their daily lives.
+                Instead of the typical social media experience that often leaves
+                people feeling drained or distracted, Bloom focuses on creating
+                moments of growth and positivity. Imagine scrolling through your
+                phone and, instead of seeing random or stressful content, you're
+                engaging with ideas, stories, and tools that uplift you and
+                encourage you to take meaningful actions—both online and in the
+                real world.
                 <br />
                 <br />
-                At Baron-inc Events, we’re driven by a passion for delivering
-                unparalleled experiences in entertainment. From curating
-                unforgettable events to nurturing top-tier talents, we’re here
-                to bring your visions to life and help you achieve your goals.
-                Every project we undertake is thoughtfully crafted with
-                precision and creativity, ensuring that you feel empowered,
-                celebrated, and at the center of the action. Our team is
-                dedicated to providing exceptional support, whether you’re an
-                entertainer, or enthusiast. At Baron-inc, it’s about creating a
-                legacy worth remembering.
+                Our mission is to make technology a force for good by nurturing
+                personal growth and strengthening our shared sense of community.
+                Bloom is like a digital garden, where every interaction is a
+                seed planted for something greater—whether that’s gratitude,
+                creativity, or connection. We’re reimagining how technology can
+                serve humanity, helping people not just stay connected, but
+                truly thrive.
               </p>
             </div>
           </div>

@@ -7,8 +7,8 @@ export default function SceneInfo() {
   return (
     <div>
       <InfoOne />
-      {/* <InfoTwo />
-      <InfoThree /> */}
+      <InfoTwo />
+      {/* <InfoThree /> */}
     </div>
   );
 }

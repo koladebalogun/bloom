@@ -10,7 +10,7 @@ export default function InfoOne() {
   const [currentScene] = useAtom(currentSceneAtom);
 
   useEffect(() => {
-    if (currentScene === 5) {
+    if (currentScene === 10) {
       gsap.fromTo(
         ".containerOne",
         { opacity: 0, x: 50 },
@@ -19,7 +19,7 @@ export default function InfoOne() {
           x: 0,
           ease: "power1.inOut",
           duration: 1.2,
-          delay:2
+          delay: 2,
         }
       );
 
@@ -95,18 +95,17 @@ export default function InfoOne() {
 
   return (
     <div>
-      {currentScene === 5 && (
+      {currentScene === 10 && (
         <div className="containerOne">
           <div className="hero">
             <div className="overlay"></div>
             <div className="header">
-
               <p className="content">
-                Hi there! I’m Kolade Balogun, a front-end developer from Lagos,
-                Nigeria with over 4 years of experience building websites and
-                applications that feel both intuitive and engaging. I love the
-                process of taking ideas and turning them into interactive
-                experiences that look and work great across devices.
+                We live in an era where our relationship with technology is
+                broken. Social media is designed to exploit, not empower; it
+                captures attention, not intention. Imagine a scroll that uplifts
+                rather than drains! Bloomscroll reclaims the feed as a tool for
+                alignment, empowerment, and collective evolution.
               </p>
             </div>
 

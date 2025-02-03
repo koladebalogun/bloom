@@ -19,7 +19,7 @@ export default function Lotus() {
   useEffect(() => {
     if (actions) {
       const firstAnimation = actions[Object.keys(actions)[0]]; // Get the first animation
-      if (currentScene === 5) {
+      if (currentScene === 10) {
         firstAnimation.setLoop(THREE.LoopOnce, 1); // Play only once
         firstAnimation.clampWhenFinished = true; // Stop at the last frame
         firstAnimation.play();

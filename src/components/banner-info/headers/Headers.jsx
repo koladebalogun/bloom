@@ -9,7 +9,7 @@ export default function Headers() {
     const [currentScene] = useAtom(currentSceneAtom);
   return (
     <div>
-      {currentScene && <BannerHeader />}
+       <BannerHeader />
       {/* {currentScene === 3 && <BannerHeader2 />} */}
       {/* {currentScene >= 4 && <BannerHeader3 />} */}
     </div>

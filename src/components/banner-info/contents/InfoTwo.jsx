@@ -10,7 +10,7 @@ export default function InfoTwo() {
   const [currentScene] = useAtom(currentSceneAtom);
 
   useEffect(() => {
-    if (currentScene === 3) {
+    if (currentScene === 2) {
       gsap.fromTo(
         ".containerTwo",
         { opacity: 0, x: 50 },
@@ -19,7 +19,7 @@ export default function InfoTwo() {
           x: 0,
           ease: "power1.inOut",
           duration: 1.2,
-          delay:2
+          delay: 2,
         }
       );
 
@@ -95,18 +95,17 @@ export default function InfoTwo() {
 
   return (
     <div>
-      {currentScene === 3 && (
+      {currentScene === 2 && (
         <div className="containerTwo">
           <div className="hero">
             <div className="overlay"></div>
             <div className="header">
-
               <p className="content">
-                Hi there! I’m Kolade Balogun, a front-end developer from Lagos,
-                Nigeria with over 4 years of experience building websites and
-                applications that feel both intuitive and engaging. I love the
-                process of taking ideas and turning them into interactive
-                experiences that look and work great across devices.
+                “Social media” is a broken term, loaded with negative
+                connotations. The value of this content has dropped to zero and
+                we’re headed toward one of the greatest deficits of meaning and
+                myth that humanity has faced.Though we are living in a state of
+                chaos, there is a silent growing beauty.
               </p>
             </div>
 

@@ -59,7 +59,7 @@ export default function BannerHeader() {
   return (
     <>
       <div className="header">
-        <h1>BLOOm-sCROLL</h1>
+        <h1>BLOOM SCROLL</h1>
       </div>
     </>
   );
